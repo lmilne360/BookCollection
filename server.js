@@ -1,4 +1,5 @@
 const express = require('express');
+const books = require('./books-test-collection.json')
 
 const port = 4000;
 
@@ -15,5 +16,10 @@ app.use(function(req, res, next) {
     res.send('API works')
     
 })
+
+app.get('/books', (req, res)=> {
+    res.json(books)
+})
+
 
 app.listen(port, () => console.log(`Api listening at port ${port}`))
