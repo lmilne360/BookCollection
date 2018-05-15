@@ -58,7 +58,6 @@ export default class BookList extends Component {
               items={this.props.books}
               onChangePage={this.onChangePage}
               labels={customLabels}
-              disableDefaultStyles={true}
             />
           </div>
         )}
